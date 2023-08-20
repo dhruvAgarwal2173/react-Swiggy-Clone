@@ -4,16 +4,16 @@ const RestaurantCard = ({
   name,
   cuisines,
   cloudinaryImageId,
-  lastMileTravelString,
-  deliveryTime
+  avgRating,
+  costForTwo
 }) => {
   return (
     <div className="card">
       <img src={IMG_CDN_URL + cloudinaryImageId} />
       <h2>{name}</h2>
-      <h3>{cuisines.join(", ")}</h3>
-      <h5>{deliveryTime} minutes</h5>
-
+      <h4>{avgRating}/5 🔥</h4>
+      <h4>{costForTwo}</h4>
+      <h4>{cuisines.join(", ")}</h4>
     </div>
   );
 };
